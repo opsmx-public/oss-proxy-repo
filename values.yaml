@@ -4,6 +4,15 @@ global:
 redis:
   replica:
     replicaCount: 1
+#init-containers
+createHalyardLocal:
+  image: 
+    repository: quay.io/opsmxpublic/awsgit
+    tag: v3-js
+halyardconfigUpdate:
+  image: 
+    repository: quay.io/opsmxpublic/k8s-decoder
+    tag: hal
 halyard:
   gitops:
     enabled: true
