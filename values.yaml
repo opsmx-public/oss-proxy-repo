@@ -34,3 +34,29 @@ halyard:
   image:
     repository: us-docker.pkg.dev/spinnaker-community/docker/halyard
     tag: 1.45.0
+# Minio access/secret keys for the in-cluster S3 usage
+# Minio is not exposed publically
+minio:
+  enabled: true
+  image:
+    repository: opsmx11/oss
+    tag: minio
+  service:
+    type: ClusterIP
+  accessKey: spinnakeradmin
+  secretKey: spinnakeradmin
+  defaultBucket:
+    enabled: true
+    name: "spinnaker"
+  nodeSelector: {}
+
+openldap:
+  image:
+  # From repository https://github.com/osixia/docker-openldap
+  repository: opsmx11/oss
+  tag: openldap
+  
+redis:
+  image:
+    repository: opsmx11/oss
+    tag: redis
