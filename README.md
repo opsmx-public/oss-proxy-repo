@@ -1,1 +1,1 @@
-# oss-proxy-repo
+# oss-spin
