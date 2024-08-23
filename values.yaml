@@ -62,8 +62,8 @@ minio:
 openldap:
   image:
   # From repository https://github.com/osixia/docker-openldap
-  repository: opsmx11/oss
-  tag: openldap
+    repository: opsmx11/oss
+    tag: openldap
   
 redis:
   image:
